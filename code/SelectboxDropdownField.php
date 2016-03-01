@@ -27,9 +27,9 @@ class SelectboxDropdownField extends DropdownField
 
         //allow for not including default styles
         if ($this->config()->get('require_css') == true) {
-            Requirements::css(SELECTBOX_DROPDOWN_FIELD_DIR_THIRD_PARTY_DIR . '/jquery.selectbox-0.2/css/jquery.selectbox.css');
+            Requirements::css(SELECTBOX_DROPDOWN_FIELD_DIR_THIRD_PARTY_DIR . 'jquery.selectbox-0.2/css/jquery.selectbox.css');
         }
-        Requirements::javascript(SELECTBOX_DROPDOWN_FIELD_DIR_THIRD_PARTY_DIR . '/jquery.selectbox-0.2/js/jquery.selectbox-0.2.min.js');
+        Requirements::javascript(SELECTBOX_DROPDOWN_FIELD_DIR_THIRD_PARTY_DIR . 'jquery.selectbox-0.2/js/jquery.selectbox-0.2.min.js');
         Requirements::javascript(SELECTBOX_DROPDOWN_FIELD_JAVASCRIPT . '/selectbox.dropdown.field.js');
 
         return parent::Field($properties);
