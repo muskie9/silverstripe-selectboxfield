@@ -300,7 +300,7 @@
 			sbOptions.appendTo(sbHolder);			
 			sbHolder.insertAfter($target);
 			
-			$("html").live('mousedown', function(e) {
+			$("html").on('mousedown', function(e) {
 				e.stopPropagation();          
 				$("select").selectbox('close'); 
 			});
@@ -337,7 +337,7 @@
 				$("#sbSelector_" + inst.uid).text(text);
 			}
 			value = value.replace(/\'/g, "\\'");
-			$(target).find("option").attr("selected", FALSE);
+            $(target).find("option").attr("selected", FALSE);
 			$(target).find("option[value='" + value + "']").attr("selected", TRUE);
 			if (inst && onChange) {
 				onChange.apply((inst.input ? inst.input[0] : null), [value, inst]);
