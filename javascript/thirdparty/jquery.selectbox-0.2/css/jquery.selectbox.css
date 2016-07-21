@@ -1,13 +1,14 @@
 @CHARSET "UTF-8";
 .sbHolder{
-	background-color: #2d2d2d;
-	border: solid 1px #515151;
-	font-family: Arial, sans-serif;
-	font-size: 12px;
-	font-weight: normal;
+	width: 100%;
+    max-width: 400px;
+    padding: 6px 5px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 1px solid #dad9d9;
 	height: 30px;
 	position: relative;
-	width: 200px;
+
 }
 .sbHolder:focus .sbSelector{
 	
@@ -22,31 +23,32 @@
 	position: absolute;
 	text-indent: 10px;
 	top: 0;
-	width: 170px;
+	width: 100%;
 }
 .sbSelector:link, .sbSelector:visited, .sbSelector:hover{
-	color: #EBB52D;
+	color: #333;
 	outline: none;
 	text-decoration: none;
 }
 .sbToggle{
-	background: url(../img/select-icons.png) 0 -116px no-repeat;
+	background: url(../img/simple_selectbox_icons.png) no-repeat 8px center #b80000;
 	display: block;
 	height: 30px;
 	outline: none;
 	position: absolute;
-	right: 0;
-	top: 0;
-	width: 30px;
+	right: -1px;
+	top: -1px;
+	width: 40px;
+	z-index: 5;
 }
 .sbToggle:hover{
-	background: url(../img/select-icons.png) 0 -167px no-repeat;
+	background: url(../img/simple_selectbox_icons.png) no-repeat 8px center #C80000;
 }
 .sbToggleOpen{
-	background: url(../img/select-icons.png) 0 -16px no-repeat;
+	background: url(../img/simple_selectbox_icons.png) no-repeat -43px center #C80000;
 }
 .sbToggleOpen:hover{
-	background: url(../img/select-icons.png) 0 -66px no-repeat;
+	background: url(../img/simple_selectbox_icons.png) no-repeat -43px center #C80000;
 }
 .sbHolderDisabled{
 	background-color: #3C3C3C;
@@ -59,15 +61,15 @@
 	
 }
 .sbOptions{
-	background-color: #212121;
-	border: solid 1px #515151;
+	background-color: #fff;
+    border: 1px solid #dad9d9;
 	list-style: none;
 	left: -1px;
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	top: 30px;
-	width: 200px;
+	width: 100%;
 	z-index: 1;
 	overflow-y: auto;
 }
@@ -75,31 +77,31 @@
 	padding: 0 7px;
 }
 .sbOptions a{
-	border-bottom: dotted 1px #515151;
+	border-bottom: dotted 1px #dad9d9;
 	display: block;
 	outline: none;
 	padding: 7px 0 7px 3px;
 }
 .sbOptions a:link, .sbOptions a:visited{
-	color: #ddd;
+	color: #333;
 	text-decoration: none;
 }
 .sbOptions a:hover,
 .sbOptions a:focus,
 .sbOptions a.sbFocus{
-	color: #EBB52D;
+	color: #C80000;
 }
 .sbOptions li.last a{
 	border-bottom: none;
 }
 .sbOptions .sbDisabled{
-	border-bottom: dotted 1px #515151;
+	border-bottom: dotted 1px #dad9d9;
 	color: #999;
 	display: block;
 	padding: 7px 0 7px 3px;
 }
 .sbOptions .sbGroup{
-	border-bottom: dotted 1px #515151;
+	border-bottom: dotted 1px #dad9d9;
 	color: #EBB52D;
 	display: block;
 	font-weight: bold;
