@@ -1,5 +1,11 @@
 <?php
 
+namespace Muskie9\SelectboxField;
+
+use SilverStripe\Core\Convert;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\View\Requirements;
+
 /**
  * Class SelectboxDropdownField
  */
@@ -18,7 +24,7 @@ class SelectboxDropdownField extends DropdownField
 
     /**
      * @param array $properties
-     * @return HTMLText
+     * @return string
      */
     public function Field($properties = array())
     {
@@ -27,10 +33,11 @@ class SelectboxDropdownField extends DropdownField
 
         //allow for not including default styles
         if ($this->config()->get('require_css') == true) {
-            Requirements::css(SELECTBOX_DROPDOWN_FIELD_DIR_THIRD_PARTY_DIR . 'jquery.selectbox-0.2/css/jquery.selectbox.css');
+            Requirements::css('muskie9/silverstripe-selectboxfield: javascript/thirdparty/jquery.selectbox-0.2/css/jquery.selectbox.css');
         }
-        Requirements::javascript(SELECTBOX_DROPDOWN_FIELD_DIR_THIRD_PARTY_DIR . 'jquery.selectbox-0.2/js/jquery.selectbox-0.2.min.js');
-        Requirements::javascript(SELECTBOX_DROPDOWN_FIELD_JAVASCRIPT . '/selectbox.dropdown.field.js');
+        Requirements::javascript('silverstripe/admin: thirdparty/jquery/jquery.min.js');
+        Requirements::javascript('muskie9/silverstripe-selectboxfield: javascript/thirdparty/jquery.selectbox-0.2/js/jquery.selectbox-0.2.min.js');
+        Requirements::javascript('muskie9/silverstripe-selectboxfield: javascript/selectbox.dropdown.field.js');
 
         return parent::Field($properties);
     }

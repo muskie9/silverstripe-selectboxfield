@@ -6,8 +6,7 @@ Selectbox dropdown field adds additional styling to your basic dropdown fields
 
 ## Requirements
 
-- [cms 3.2.x](https://github.com/silverstripe/silverstripe-cms)
-- [framework 3.2.x](https://github.com/silverstripe/silverstripe-framework)
+- [framework ^4.0](https://github.com/silverstripe/silverstripe-framework)
 
 ## Installation
 
