@@ -1,33 +1,44 @@
 {
-  "name": "muskie9/silverstripe-selectboxfield",
-  "description": "Selectbox dropdown field for silverstripe",
-  "authors": [
-    {
-      "name": "Nic Horstmeier",
-      "email": "nhorstmeier@gmail.com",
-      "homepage": "http://muskie9.com",
-      "role": "Developer"
-    }
-  ],
-  "keywords": [
-    "silverstripe",
-    "SelectboxField"
-  ],
-  "type": "silverstripe-module",
-  "license": "BSD-3-Clause",
-  "require": {
-    "silverstripe/cms": "^3.2",
-    "silverstripe/framework": "^3.2"
-  },
-  "extra": {
-    "installer-name": "selectboxfield"
-  },
-  "require-dev": {
-    "phpunit/PHPUnit": "^3.7"
-  },
-  "config": {
-    "process-timeout": 600
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "name": "muskie9/silverstripe-selectboxfield",
+    "description": "Selectbox dropdown field for silverstripe",
+    "authors": [
+        {
+            "name": "Nic Horstmeier",
+            "email": "nhorstmeier@gmail.com",
+            "homepage": "http://muskie9.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "silverstripe",
+        "SelectboxField"
+    ],
+    "type": "silverstripe-vendormodule",
+    "license": "BSD-3-Clause",
+    "require": {
+        "silverstripe/framework": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "^5.7"
+    },
+    "extra": {
+        "installer-name": "selectboxfield",
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        },
+        "expose": [
+            "javascript"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Muskie9\\SelectboxField\\": "src/",
+            "Muskie9\\SelectboxField\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
